@@ -1,0 +1,178 @@
+@font-face {
+    font-family: badoo2;
+    src: url(./utilities//assets/badoo2/Baloo2-VariableFont_wght.ttf);
+  }
+  
+  * {
+    user-select: none;
+    z-index: 0;
+    font-family: badoo2;
+  }
+  
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .window {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    height: 350px;
+    width: 250px;
+  }
+  
+  .top-frame {
+    display: flex;
+    order: 0;
+    width: 230px;
+    height: 30px;
+    background-color: rgba(75, 16, 48, 1);
+  }
+  
+  .app-name {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: left;
+    align-items: center;
+    align-content: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 150px;
+    order: 0;
+  }
+  
+  .header-txt {
+    color: white;
+    font-size: small;
+  }
+  
+  .top-frame-spacer {
+    height: 30px;
+    width: 20px;
+    order: 1;
+  }
+  
+  .top-frame-button-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    order: 2;
+    width: 60px;
+  }
+  
+  .top-frame-button {
+    font-size: small;
+    padding: 5px;
+    color: white;
+  }
+  
+  .top-frame-button:hover {
+    color: gray;
+  }
+  
+  .main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    width: 230px;
+    height: 290px;
+    background-color: whitesmoke;
+    order: 1;
+  }
+  
+  .robot-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    order: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+  }
+  
+  .robot {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+  }
+  
+  .robot_image {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    order: 1;
+  }
+  
+  .button {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+    background-color: rgba(75, 16, 48, 1);
+    border: 1px solid black;
+    width: 150px;
+    height: 30px;
+  }
+  
+  .button-txt {
+    color: white;
+  }
+  
+  .button:hover {
+    background-color: rgba(75, 16, 48, 0.8);
+  }
+  
+  .border {
+    width: 190px;
+    height: 0.5px;
+    background-color: rgba(75, 16, 48, 1);
+    order: 2;
+  }
+  
+  .warnings {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    height: 80px;
+    order: 3;
+  }
+  
+  .warning {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+    color: red;
+  }
+  
+  
