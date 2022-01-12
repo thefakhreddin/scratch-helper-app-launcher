@@ -1,6 +1,6 @@
 @font-face {
     font-family: badoo2;
-    src: url(./assets/badoo2/Baloo2-VariableFont_wght.ttf);
+    src: url(./resources/assets/badoo2/Baloo2-VariableFont_wght.ttf);
   }
   
   * {
@@ -86,7 +86,7 @@
     align-content: center;
     width: 230px;
     height: 290px;
-    background-color: whitesmoke;
+    background-image: url(./assets/bg.png);
     order: 1;
   }
 

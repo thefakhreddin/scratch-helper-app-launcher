@@ -6,7 +6,7 @@ let child_process = null;
 
 document.querySelector("#connect-botton").onclick = () => {
   if (state == "not_running") {
-    child_process = exec("./server/server_v7.1.exe");
+    child_process = exec("./resources/server/server_v7.1");
     document.querySelector("#connect-botton").querySelector("a").innerHTML =
       "Disconnect";
       document.querySelector("#connect-botton").style.backgroundColor = "red"
@@ -22,7 +22,7 @@ document.querySelector("#connect-botton").onclick = () => {
 };
 
 document.querySelector("#open-scratch").onclick = () => {
-    open("./extention.sb2")
+    open("./resources/extention.sb2")
 }
 
 function docInit() {}
