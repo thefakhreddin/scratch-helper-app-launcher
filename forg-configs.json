@@ -1,0 +1,28 @@
+{
+  "makers": [
+    {
+      "name": "@electron-forge/maker-wix",
+      "config": {
+        "exe": "Mulberry Tart Scratch.exe",
+        "language": "1033",
+        "manufacturer": "Tart Robotics Inc.",
+        "name": "Mulberry Tart Scratch",
+        "programFilesFolderName": "Mulberry Tart Scratch",
+        "shortName": "MTS"
+      }
+    },
+    {
+      "name": "@electron-forge/maker-squirrel",
+      "config": {
+        "authors": "Fakhreddin Amirhosseini",
+        "exe": "Mulberry Tart Scratch.exe",
+        "iconUrl": "G:/scratch-helper-app-launcher/extraResources/assets/icon.ico",
+        "setupExe": "Mulberry Tart Scratch.exe",
+        "setupIcon": "G:/scratch-helper-app-launcher/extraResources/assets/icon.ico",
+        "noMsi": "false",
+        "setupMsi": "Mulberry Tart Scratch.msi",
+        "name": "MulberryTartScratch"
+      }
+    }
+  ]
+}
