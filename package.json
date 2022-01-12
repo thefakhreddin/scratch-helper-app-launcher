@@ -1,29 +1,53 @@
 {
   "name": "scratch-helper-app-launcher",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple GUI for launching Scratch extention and its helper app for Mulberry Tart.",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
   },
   "keywords": [],
-  "author": "",
+  "author": "Fakhreddin Amirhosseini",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^16.0.6",
-    "electron-forge": "^5.2.4"
+    "@electron-forge/cli": "^6.0.0-beta.63",
+    "@electron-forge/maker-deb": "^6.0.0-beta.63",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.63",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.63",
+    "@electron-forge/maker-zip": "^6.0.0-beta.63",
+    "electron": "^16.0.6"
   },
   "dependencies": {
     "child_process": "^1.0.2",
-    "open": "^8.4.0"
+    "electron-squirrel-startup": "^1.0.0",
+    "open": "^8.4.0",
+    "path": "^0.12.7"
   },
   "build": {
-    "extraResources": [{
-      "from": "./resources",
-      "to": "resources",
-      "filter": [
-        "**/*"
+    "build": {
+      "extraResources": [
+        "./extraResources/**"
       ]
-    }]
+    }
+  },
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "authors": "Fakhreddin Amirhosseini",
+            "iconUrl": "G:/scratch-helper-app-launcher/extraResources/assets/icon.ico",
+            "setupExe": "Mulberry Tart Scratch",
+            "setupIcon": "G:/scratch-helper-app-launcher/extraResources/assets/icon.ico",
+            "setupMsi": "Mulberry Tart Scratch",
+            "name": "scratch_helper_app_launcher"
+          }
+        }
+      ]
+    }
   }
 }

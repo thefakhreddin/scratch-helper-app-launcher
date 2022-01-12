@@ -1,2 +1,3 @@
 /node_modules
-/resources/server/node_modules
+/extraResources/server/node_modules
+out/

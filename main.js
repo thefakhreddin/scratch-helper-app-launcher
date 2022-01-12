@@ -1,4 +1,8 @@
 const { app, BrowserWindow, Menu } = require("electron");
+
+if (require('electron-squirrel-startup')) return app.quit();
+
+
 const path = require("path");
 
 function createWindow() {
@@ -7,10 +11,8 @@ function createWindow() {
     height: 350,
     fullscreenable: false,
     maximizable: false,
-    // frame: false,
     resizable: false,
     webPreferences: {
-      // enableRemoteModule: true,
       preload: path.join(__dirname, "index.js"),
     },
   });
