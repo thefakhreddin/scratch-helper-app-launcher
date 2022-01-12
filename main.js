@@ -11,11 +11,11 @@ function createWindow() {
     // resizable: false,
     webPreferences: {
       // enableRemoteModule: true,
-      preload: path.join(__dirname, "index/index.js"),
+      preload: path.join(__dirname, "index.js"),
     },
   });
 
-  win.loadFile("index/index.html");
+  win.loadFile("index.html");
 }
 
 app.whenReady().then(() => {
