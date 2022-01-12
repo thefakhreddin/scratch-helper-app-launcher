@@ -3,12 +3,12 @@ const path = require("path");
 
 function createWindow() {
   const win = new BrowserWindow({
-    width: 250*3,
-    height: 350*2,
+    width: 250,
+    height: 350,
     fullscreenable: false,
     maximizable: false,
     // frame: false,
-    // resizable: false,
+    resizable: false,
     webPreferences: {
       // enableRemoteModule: true,
       preload: path.join(__dirname, "index.js"),
@@ -38,38 +38,38 @@ app.on("window-all-closed", () => {
 });
 
 const mainMenuTemplate = [
-  {
-    label: "File",
-    submenu: [
-      {
-        label: "Quit",
-        accelerator: process.platform == "darwin" ? "Command+Q" : "Ctrl+Q",
-        click() {
-          app.quit();
-        },
-      },
-    ],
-  },
+  // {
+  //   label: "File",
+  //   submenu: [
+  //     {
+  //       label: "Quit",
+  //       accelerator: process.platform == "darwin" ? "Command+Q" : "Ctrl+Q",
+  //       click() {
+  //         app.quit();
+  //       },
+  //     },
+  //   ],
+  // },
 ];
 
-if (process.platform == "darwin") {
-  mainMenuTemplate.unshift({ label: "" });
-}
+// if (process.platform == "darwin") {
+//   mainMenuTemplate.unshift({ label: "" });
+// }
 
-if (process.env.NODE_ENV !== "production") {
-  mainMenuTemplate.push({
-    label: "Developer Tools",
-    submenu: [
-      {
-        label: "Toggle Dev Tools",
-        click(item, focusedWindow) {
-          focusedWindow.toggleDevTools();
-        },
-        accelerator: process.platform == "darwin" ? "Command+I" : "Ctrl+I",
-      },
-      {
-        role: "reload",
-      },
-    ],
-  });
-}
+// if (process.env.NODE_ENV !== "production") {
+//   mainMenuTemplate.push({
+//     label: "Developer Tools",
+//     submenu: [
+//       {
+//         label: "Toggle Dev Tools",
+//         click(item, focusedWindow) {
+//           focusedWindow.toggleDevTools();
+//         },
+//         accelerator: process.platform == "darwin" ? "Command+I" : "Ctrl+I",
+//       },
+//       {
+//         role: "reload",
+//       },
+//     ],
+//   });
+// }
